@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : counter
+Version: L-2016.03-SP1
+Date   : Fri May 20 23:55:22 2022
+****************************************
+
+Operating Conditions: nom_pvt   Library: gtech
+Wire Load Model Mode: top
+
+  Startpoint: ff_inst/out_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: out[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ff_inst/out_reg[0]/clocked_on (**SEQGEN**)              0.00       0.00 r
+  ff_inst/out_reg[0]/Q (**SEQGEN**)                       0.00       0.00 f
+  ff_inst/out[0] (DFF)                                    0.00       0.00 f
+  add1_inst/in[0] (add_1)                                 0.00       0.00 f
+  add1_inst/add_5/A_0 (*ADD_UNS_OP_16_1_16)               0.00       0.00 f
+  add1_inst/add_5/*cell*10/A[0] (DW01_inc_width16)        0.00       0.00 f
+  ...
+  add1_inst/add_5/*cell*10/SUM[0] (DW01_inc_width16)      0.00       0.00 r
+  add1_inst/add_5/Z_0 (*ADD_UNS_OP_16_1_16)               0.00       0.00 r
+  add1_inst/out[0] (add_1)                                0.00       0.00 r
+  out[0] (out)                                            0.00       0.00 r
+  data arrival time                                                  0.00
+
+  clock clk (rise edge)                                1000.00    1000.00
+  clock network delay (ideal)                             0.00    1000.00
+  output external delay                                 -10.00     990.00
+  data required time                                               990.00
+  --------------------------------------------------------------------------
+  data required time                                               990.00
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                      990.00
+
+
+1
